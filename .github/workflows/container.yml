@@ -24,4 +24,4 @@ jobs:
         run: docker build -t tower .
 
       - name: Run Docker container
-        run: docker run tower
+        run: docker run --name cool_lamport tower
