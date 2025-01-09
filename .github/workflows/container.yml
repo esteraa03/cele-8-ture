@@ -21,7 +21,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       - name: Build Docker image
-        run: docker build -t tower-app .
+        run: docker build -t tower .
 
       - name: Run Docker container
-        run: docker run tower-app
+        run: docker run tower
