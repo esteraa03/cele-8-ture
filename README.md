@@ -52,4 +52,10 @@ Exemplu vizual:
 0 0 0 0 0 0 0 0
 ```
 3. Soluția găsită    
-![Solutie:]()
+![Solutie:](https://github.com/esteraa03/cele-8-ture/blob/main/tabla-de-sah.png)  
+
+4. Livrare  
+
+
+5. Concluzie
+Proiectul oferă o implementare eficientă pentru rezolvarea Problemei Celor 8 Turnuri utilizând algoritmul de backtracking. Este o soluție elegantă și ușor de înțeles pentru o problemă clasică în teoria problemei și este utilă pentru înțelegerea principiilor de bază ale algoritmilor de backtracking.
