@@ -1,6 +1,6 @@
 ### PROIECT SINCRETIC : TEMA NR. 23    
 # Golea Andreea Estera   
-# ***************************************************   
+***************************************************   
  **Problema celor 8 turnuri:** Să se scrie un program care plasează 8 turnuri pe tabla de șah, fără ca acestea să se atace reciproc.   
 
  1. Introducere
@@ -57,5 +57,5 @@ Exemplu vizual:
 4. Livrare  
 
 
-5. Concluzie
+5. Concluzie   
 Proiectul oferă o implementare eficientă pentru rezolvarea Problemei Celor 8 Turnuri utilizând algoritmul de backtracking. Este o soluție elegantă și ușor de înțeles pentru o problemă clasică în teoria problemei și este utilă pentru înțelegerea principiilor de bază ale algoritmilor de backtracking.
