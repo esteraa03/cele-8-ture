@@ -6,7 +6,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:/msys64/mingw64/include",
-                "C:/path/to/freeglut/include"
+                "C:/msys64/mingw64/include/GL"  // This is where freeglut's headers are located
             ],
             "defines": [],
             "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
@@ -17,7 +17,7 @@
                 "path": [
                     "C:/msys64/mingw64/include",
                     "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++",
-                    "C:/path/to/freeglut/include"
+                    "C:/msys64/mingw64/include/GL"  // Also add this path for browsing
                 ],
                 "limitSymbolsToIncludedHeaders": true
             }
