@@ -1,27 +1,24 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+    "version": 4,
+    "configurations": [
         {
-            "label": "C/C++: g++.exe build active file",
-            "type": "shell",
-            "command": "cmd",
-            "args": [
-                "/c",
-                "chcp 65001>nul && C:/msys64/mingw64/bin/g++.exe",
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe",
-                "-L", "C:/msys64/mingw64/lib",        // Link to MinGW libraries
-                "-lfreeglut",                         // Link FreeGLUT library
-                "-lOpenGL32"                          // Link OpenGL library
+            "name": "Windows",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/include"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "Generated task by Debugger."
+            "defines": [],
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
+            "intelliSenseMode": "gcc-x86_64",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "browse": {
+                "path": [
+                    "C:/msys64/mingw64/include",
+                    "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
         }
     ]
 }
