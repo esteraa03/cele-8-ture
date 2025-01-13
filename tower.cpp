@@ -1,124 +1,62 @@
-#include <iostream>
-#include <vector>
+#include<windows.h>
 #include <GL/glut.h>
 
-const int N = 8;
-
-// Tabla de sah - 0 pentru spatii libere, 1 pentru turnuri
-std::vector<std::vector<int>> board(N, std::vector<int>(N, 0));
-
-bool can_place_tower(const std::vector<std::vector<int>>& board, int r, int c)
-{
-    for (int i = 0; i < N; i++)
-    {
-        if (board[r][i] == 1 || board[i][c] == 1)
-            return false;
-    }
-    return true;
-}
-
-bool place_tower(std::vector<std::vector<int>>& board, int nr_towers)
-{
-    if (nr_towers == N)
-    {
-        // Afisare solutie
-        return true;
-    }
-
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < N; j++)
-        {
-            if (can_place_tower(board, i, j))
-            {
-                board[i][j] = 1;
-                if (place_tower(board, nr_towers + 1))
-                    return true;
-                board[i][j] = 0;
-            }
-        }
-    }
-    return false;
-}
-
-// Functie pentru a desena tabla de sah si turnurile
-void draw_board()
-{
-    glClear(GL_COLOR_BUFFER_BIT); // Curata ecranul
-
-    bool f = false;
-    for (int x = 0; x < N; x++)
-    {
-        for (int y = 0; y < N; y++)
-        {
-            // Coloram in alb sau negru
-            if (f)
-            {
-                glColor3f(1.0, 1.0, 1.0); // Alb
-            }
-            else
-            {
-                glColor3f(0.0, 0.0, 0.0); // Negru
-            }
-
-            glBegin(GL_QUADS);
-            glVertex2i(x * 100, y * 100);
-            glVertex2i(x * 100, (y + 1) * 100);
-            glVertex2i((x + 1) * 100, (y + 1) * 100);
-            glVertex2i((x + 1) * 100, y * 100);
-            glEnd();
-
-            f = !f; // Alternam culoarea
-
-        }
-        if (N % 2 == 0)
-            f = !f;
-    }
-
-    // Desenam turnurile
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < N; j++)
-        {
-            if (board[i][j] == 1)
-            {
-                // Desenam turnul (un patrat alb)
-                glColor3f(0.53f, 0.81f, 0.92f); // Baby blue pentru turnuri
-                glBegin(GL_QUADS);
-                glVertex2i(j * 100 + 25, i * 100 + 25);
-                glVertex2i(j * 100 + 25, (i + 1) * 100 - 25);
-                glVertex2i((j + 1) * 100 - 25, (i + 1) * 100 - 25);
-                glVertex2i((j + 1) * 100 - 25, i * 100 + 25);
-                glEnd();
-            }
-        }
-    }
-
-    glFlush(); // Procesam toate rutinele OpenGL
-}
-
-// Functie de initializare pentru OpenGL
 void init(void)
 {
-    glClearColor(0.0, 0.0, 0.0, 0.0); // Seteaza culoarea de fundal (negru)
-    glMatrixMode(GL_PROJECTION); // Seteaza modul de proiectie
-    glLoadIdentity();
-    glOrtho(0.0, N * 100.0, 0.0, N * 100.0, -1.0, 1.0);
+    glClearColor(0.0, 0.0, 0.0, 0.0);	// Set display window colour to white
+
+    glMatrixMode(GL_PROJECTION);		// Set projection parameters
+    gluOrtho2D(0.0, 800.0, 0.0, 800.0);
+}
+
+void display(void)
+{
+    glClear(GL_COLOR_BUFFER_BIT);	// Clear display window
+
+    bool f = false;
+
+    for (int x = 0;x <= 800;x += 100) {
+
+        for (int y = 0;y <= 800;y += 100) {
+
+            if (f) {
+
+                glColor3f(1.0, 1.0, 1.0);
+                f = !f;
+
+            }
+            else {
+
+                glColor3f(0.0, 0.0, 0.0);
+                f = !f;
+
+            }
+            glBegin(GL_QUADS);
+            glVertex2i(x, y);
+            glVertex2i(x, y + 100);
+            glVertex2i(x + 100, y + 100);
+            glVertex2i(x + 100, y);
+
+            glEnd();
+
+            glFlush();	// Process all OpenGL routines
+        }
+    }
+
 }
 
 int main(int argc, char* argv[])
 {
-    place_tower(board, 0); // Plasam cele 8 turnuri
+    glutInit(&argc, argv);						// Initalise GLUT
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);	// Set display mode
 
-    glutInit(&argc, argv); // Initializam GLUT
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); // Setam modul de afisare
-    glutInitWindowPosition(300, 50); // Pozitionam fereastra
-    glutInitWindowSize(800, 800); // Setam dimensiunea ferestrei
-    glutCreateWindow("Problema celor 8 Turnuri"); // Cream fereastra
+    glutInitWindowPosition(300, 50);				// Set window position
+    glutInitWindowSize(700, 700);					// Set window size
+    glutCreateWindow("chess-board");	// Create display window
 
-    init(); // Initializam OpenGL
-    glutDisplayFunc(draw_board); // Functia care va desena tabla
-    glutMainLoop(); // Rulam bucla principala GLUT
+    init();							// Execute initialisation procedure
+    glutDisplayFunc(display);		// Send graphics to display window
+    glutMainLoop();					// Display everything and wait
 
     return 0;
 }
