@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <GL/glut.h>
+#include <cmath>
 
 const int N = 8;  // Dimensiunea tablei de șah (8x8)
 const int TILE_SIZE = 100;  // Dimensiunea fiecărei celule pe tablă
