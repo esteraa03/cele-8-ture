@@ -18,5 +18,5 @@ RUN apt-get update && apt-get install -y \
 # Compilarea fișierului C++ cu librăriile necesare
 RUN g++ -o tower tower.cpp -lglut -lGLU -lGL -lstdc++
 
-# Comanda de rulare a aplicației
+# Rulează fișierul compilat
 CMD ["./tower"]
