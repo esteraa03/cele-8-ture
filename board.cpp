@@ -6,7 +6,8 @@ void init(void)
     glClearColor(0.0, 0.0, 0.0, 0.0);	// Set display window colour to white
 
     glMatrixMode(GL_PROJECTION);		// Set projection parameters
-    gluOrtho2D(0.0, 800.0, 0.0, 800.0);
+    glOrtho(0.0, 800.0, 0.0, 800.0, -1.0, 1.0);
+
 }
 
 void display(void)
