@@ -1,28 +1,23 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+    "configurations": [
         {
-            "label": "build",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "-I", "C:/msys64/mingw64/include",  // Path to FreeGLUT headers
-                "-I", "C:/msys64/mingw64/include/GL",  // Path to GL headers
-                "board.cpp",  // Your source file
-                "-o", "board.exe",  // Output executable name
-
-                // Link OpenGL and FreeGLUT libraries
-                "-L", "C:/msys64/mingw64/lib",  // Path to the library files
-                "-lfreeglut",  // Link FreeGLUT
-                "-lGL",  // Link OpenGL
-                "-lGLU"  // Link GLU (needed by GLUT)
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/include",            // Path to MinGW includes
+                "C:/msys64/mingw64/include/GL"          // Path to FreeGLUT and OpenGL headers
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": ["$gcc"],
-            "detail": "Generated task by Debugger"
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",   // Path to the MinGW g++ compiler
+            "cppStandard": "c++11",                           // C++ standard to use
+            "intelliSenseMode": "gcc-x86",                    // IntelliSense mode for GCC
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "C:/msys64/mingw64/include",            // Path to MinGW includes
+                    "C:/msys64/mingw64/include/GL"          // Path to FreeGLUT and OpenGL headers
+                ]
+            }
         }
-    ]
+    ],
+    "version": 4
 }
