@@ -74,11 +74,11 @@ void display(void) {
         if (N % 2 == 0) f = !f;  // Dacă N este par, inversăm culoarea la începutul fiecărui rând
     }
 
-    // Desenăm turnurile (sub formă de cercuri roșii)
+    // Desenăm turnurile (sub formă de cercuri)
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             if (board[i][j] == 1) {
-                glColor3f(1.0, 0.0, 0.0);  // Roșu pentru turnuri
+               glColor3f(137.0f/255.0f, 207.0f/255.0f, 240.0f/255.0f);  // Culoare Baby Blue
                 glBegin(GL_POLYGON);
                 for (int angle = 0; angle < 360; angle += 10) {
                     float rad = angle * 3.14159f / 180.0f;
