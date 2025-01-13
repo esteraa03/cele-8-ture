@@ -5,7 +5,8 @@
             "name": "Windows",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/msys64/mingw64/include"
+                "C:/msys64/mingw64/include",
+                "C:/path/to/freeglut/include"
             ],
             "defines": [],
             "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
@@ -15,7 +16,8 @@
             "browse": {
                 "path": [
                     "C:/msys64/mingw64/include",
-                    "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++"
+                    "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++",
+                    "C:/path/to/freeglut/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true
             }
