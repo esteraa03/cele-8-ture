@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/include",  // Path to FreeGLUT headers
+                "C:/msys64/mingw64/include/GL"  // Additional FreeGLUT path
+            ],
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",  // Path to MinGW g++ compiler
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x86",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}
