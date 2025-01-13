@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <GL/glut.h>
+#include <cmath>
 
 const int N = 8;
 
