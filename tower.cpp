@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <GL/glut.h>
-#include <cmath>
 
 const int N = 8;
 
@@ -76,25 +75,20 @@ void draw_board()
             f = !f;
     }
 
-    // Desenam turnurile (ca cercuri)
+    // Desenam turnurile
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < N; j++)
         {
             if (board[i][j] == 1)
             {
-                // Desenam turnul sub forma unui cerc
-                glColor3f(0.53f, 0.81f, 0.92f); // Baby blue pentru turn
-
-                // Desenam turnul ca cerc
-                glBegin(GL_POLYGON);
-                for (int k = 0; k < 360; k++)
-                {
-                    float angle = k * 3.14159f / 180.0f;
-                    float x_offset = 25 * cos(angle);
-                    float y_offset = 25 * sin(angle);
-                    glVertex2f(j * 100 + 50 + x_offset, i * 100 + 50 + y_offset);
-                }
+                // Desenam turnul (un patrat alb)
+                glColor3f(0.53f, 0.81f, 0.92f); // Baby blue pentru turnuri
+                glBegin(GL_QUADS);
+                glVertex2i(j * 100 + 25, i * 100 + 25);
+                glVertex2i(j * 100 + 25, (i + 1) * 100 - 25);
+                glVertex2i((j + 1) * 100 - 25, (i + 1) * 100 - 25);
+                glVertex2i((j + 1) * 100 - 25, i * 100 + 25);
                 glEnd();
             }
         }
