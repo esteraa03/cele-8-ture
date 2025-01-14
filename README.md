@@ -50,19 +50,26 @@ Cu ajutorul acestei funcții am desenat fereastra OpenGL. Am început prin a cur
 Următorii pași sunt să inițializăm setările OpenGl, afișăm tabla și turnurile, iar în final pornim bucla principală GLUT.   
 
 3. Resurse     
-Ca și resurse extra, am folosit pentru crearea ferestrei OpenGL implementarea oferită de [https://github.com/RUHANI77/computer-graphics/blob/main/chess_Board.cpp] https://github.com/RUHANI77/computer-graphics/blob/main/chess_Board.cpp.
+Ca și resurse extra, am folosit pentru crearea ferestrei OpenGL implementarea oferită de [acest repository GitHub](https://github.com/RUHANI77/computer-graphics/blob/main/chess_Board.cpp)
 
 4. Soluția găsită    
 ![Solutie:](https://github.com/esteraa03/cele-8-ture/blob/main/board-with-solution.png)  
 
 5. Livrare  
-  Link GitHub: [https://github.com/esteraa03/cele-8-ture]https://github.com/esteraa03/cele-8-ture
-  Container Docker creat automat de platformă: [https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture]https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture
-  - Pull the pre-built Docker Image:
-  `docker pull ghcr.io/esteraa03/cele-8-ture:latest`    
-  - Run the container: 
-  `docker run -it -e DISPLAY=host.docker.internal:0 ghcr.io/esteraa03/cele-8-ture:latest`        
+  Link GitHub: [https://github.com/esteraa03/cele-8-ture][def]
+  Container Docker creat automat de platformă: [https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture](https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture)
+  - **Pull the pre-built Docker Image:**
+  ```bash
+  docker pull ghcr.io/esteraa03/cele-8-ture:latest
+  ```   
+
+  - **Run the container:**
+  ```bash
+  docker run -it -e DISPLAY=host.docker.internal:0 ghcr.io/esteraa03/cele-8-ture:latest    
+  ``` 
   
 
 6. Concluzie   
 Proiectul oferă o implementare eficientă pentru rezolvarea Problemei Celor 8 Turnuri utilizând algoritmul de backtracking. Este o soluție elegantă și ușor de înțeles pentru o problemă clasică în teoria problemei și este utilă pentru înțelegerea principiilor de bază ale algoritmilor de backtracking.
+
+[def]: https://github.com/esteraa03/cele-8-ture
