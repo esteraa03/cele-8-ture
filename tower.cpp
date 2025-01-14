@@ -3,10 +3,9 @@
 #include <GL/glut.h>
 #include <cmath>
 
-const int N = 8;  // Dimensiunea tablei de șah (8x8)
+const int N = 8;  
 const int TILE_SIZE = 100;  // Dimensiunea fiecărei celule pe tablă
 
-// Funcția care verifică dacă putem plasa un turn pe o anumită poziție (rând și coloană)
 bool can_place_tower(const std::vector<std::vector<int>>& board, int r, int c) {
     for (int i = 0; i < N; i++) {
         if (board[r][i] == 1 || board[i][c] == 1)
@@ -15,11 +14,10 @@ bool can_place_tower(const std::vector<std::vector<int>>& board, int r, int c) {
     return true;
 }
 
-// Funcția recursivă care încearcă să plaseze turnuri pe tablă
 bool place_tower(std::vector<std::vector<int>>& board, int nr_towers) {
     if (nr_towers == N) {
-        return true;  // Dacă am plasat toate cele 8 turnuri, soluția este găsită
-    }
+        return true;  
+         }
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -54,7 +52,7 @@ void display(void) {
     // Desenăm tabla de șah
     for (int x = 0; x < N; x++) {
         for (int y = 0; y < N; y++) {
-            // Determinăm culoarea celulei (albă sau neagră)
+
             if (f) {
                 glColor3f(1.0, 1.0, 1.0);  // Alb
             } else {
@@ -94,7 +92,6 @@ void display(void) {
     glFlush();  // Actualizăm fereastra
 }
 
-// Funcția principală
 int main(int argc, char* argv[]) {
     glutInit(&argc, argv);  // Inițializăm GLUT
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);  // Setăm modul de afișare
