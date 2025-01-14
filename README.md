@@ -56,8 +56,8 @@ Ca și resurse extra, am folosit pentru crearea ferestrei OpenGL implementarea o
 ![Solutie:](https://github.com/esteraa03/cele-8-ture/blob/main/board-with-solution.png)  
 
 5. Livrare  
-  [https://github.com/esteraa03/cele-8-ture] (Link GitHub)       
-  [https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture] (Container Docker creat automat de platformă)       
+  [Link GitHub] (https://github.com/esteraa03/cele-8-ture)       
+  [Container Docker creat automat de platformă] (https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture)       
   - **Pull the pre-built Docker Image:**
   ```bash
   docker pull ghcr.io/esteraa03/cele-8-ture:latest
