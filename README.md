@@ -56,8 +56,8 @@ Ca și resurse extra, am folosit pentru crearea ferestrei OpenGL implementarea o
 ![Solutie:](https://github.com/esteraa03/cele-8-ture/blob/main/board-with-solution.png)  
 
 5. Livrare  
-  Link GitHub: [https://github.com/esteraa03/cele-8-ture][def]
-  Container Docker creat automat de platformă: [https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture](https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture)
+  [https://github.com/esteraa03/cele-8-ture](Link GitHub)       
+  [https://github.com/esteraa03/cele-8-ture/pkgs/container/cele-8-ture](Container Docker creat automat de platformă)       
   - **Pull the pre-built Docker Image:**
   ```bash
   docker pull ghcr.io/esteraa03/cele-8-ture:latest
@@ -71,5 +71,3 @@ Ca și resurse extra, am folosit pentru crearea ferestrei OpenGL implementarea o
 
 6. Concluzie   
 Proiectul oferă o implementare eficientă pentru rezolvarea Problemei Celor 8 Turnuri utilizând algoritmul de backtracking. Este o soluție elegantă și ușor de înțeles pentru o problemă clasică în teoria problemei și este utilă pentru înțelegerea principiilor de bază ale algoritmilor de backtracking.
-
-[def]: https://github.com/esteraa03/cele-8-ture
